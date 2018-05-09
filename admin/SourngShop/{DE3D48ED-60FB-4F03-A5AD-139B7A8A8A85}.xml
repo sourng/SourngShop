@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration date="2018/05/07" author="e.World Technology Ltd.">
+  <project id="{DE3D48ED-60FB-4F03-A5AD-139B7A8A8A85}" file="C:\Users\SENG Sourng\Documents\PHPMaker\Projects\SourngShop.pmp" name="SourngShop" product="PHPMaker" version="14.0" datetime="2018/05/07 10:34:39" languagefolder="phplang" userlevel="-2,&quot;Anonymous&quot;,0;">
+    <table id="brands" name="brands" caption="Brands" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="cart" name="cart" caption="Cart" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="categories" name="categories" caption="Categories" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="orders" name="orders" caption="Orders" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="products" name="products" caption="Products" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="user_info" name="user_info" caption="User info" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+  </project>
+</configuration>

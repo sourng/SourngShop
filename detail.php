@@ -3,6 +3,8 @@ session_start();
 if(isset($_SESSION["uid"])){
 	header("location:profile.php");
 }
+include "db.php";
+$pro_id=$_GET['p'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -124,25 +126,51 @@ if(isset($_SESSION["uid"])){
 					<div class="col-md-12 col-xs-12" id="product_msg">
 					</div>
 				</div>
-				<div class="panel panel-info">
-					<div class="panel-heading">Products</div>
-					<div class="panel-body">
-						<div id="get_product">
-							<!--Here we get product jquery Ajax Request-->
-						</div>
-						<!--<div class="col-md-4">
-							<div class="panel panel-info">
-								<div class="panel-heading">Samsung Galaxy</div>
-								<div class="panel-body">
-									<img src="product_images/images.JPG"/>
-								</div>
-								<div class="panel-heading">$.500.00
-									<button style="float:right;" class="btn btn-danger btn-xs">AddToCart</button>
-								</div>
-							</div>
-						</div> -->
-					</div>
-					<div class="panel-footer">&copy; 2016</div>
+				<div>
+					
+						<?php 
+						$sql = "SELECT * FROM products WHERE product_id = '$pro_id'";
+						$run_query = mysqli_query($con,$sql);
+							while($row=mysqli_fetch_array($run_query)){
+									$pro_id    = $row['product_id'];
+									$pro_cat   = $row['product_cat'];
+									$pro_brand = $row['product_brand'];
+									$pro_title = $row['product_title'];
+									$product_desc = $row['product_desc'];
+									$pro_price = $row['product_price'];
+									$pro_image = $row['product_image'];
+									echo "
+										<div class='col-md-6'>
+													<div class='panel panel-info'>										
+														<div class='panel-body'>
+															<img src='product_images/$pro_image' style='width:100%; height:250px;'/>
+														</div>												
+													</div>
+												</div>	
+									";
+
+									echo "
+										<div class='col-md-6'>
+													<div class='panel panel-info'>
+														<div class='panel-heading'>$pro_title</div>
+														<div class='panel-body'>
+															$pro_brand
+															<div>
+															$product_desc
+															</div>
+														</div>
+														<div style='padding:15px;'>$.$pro_price.00
+															<button pid='$pro_id' style='float:right;' id='product' class='btn btn-danger'><span class='glyphicon glyphicon-shopping-cart'></span> AddToCart</button>
+														</div>
+													</div>
+												</div>	
+									";
+								}
+
+
+						?>
+						
+					
 				</div>
 			</div>
 			<div class="col-md-1"></div>
