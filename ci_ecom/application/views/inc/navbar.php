@@ -2,7 +2,7 @@
         <div class="container">
             <div class="navbar-header">
 
-                <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
+                <a class="navbar-brand home" href="<?php echo site_url();?>" data-animate-hover="bounce">
                     <img src="<?php echo base_url(); ?>template/img/logo.png" alt="Obaju logo" class="hidden-xs">
                     <img src="<?php echo base_url(); ?>template/img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
                 </a>

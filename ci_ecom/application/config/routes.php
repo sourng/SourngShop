@@ -59,3 +59,6 @@ $route['contact.html']='front/contact';
 
 // Detail
 $route['detail.html']='front/detail';
+
+// Category
+$route['category.html']='front/category';
