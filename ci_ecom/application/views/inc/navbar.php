@@ -36,7 +36,7 @@
                                         <div class="col-sm-3">
                                             <h5>Clothing</h5>
                                             <ul>
-                                                <li><a href="category.html">T-shirts</a>
+                                                <li><a href="<?php echo site_url(); ?>category.html">T-shirts</a>
                                                 </li>
                                                 <li><a href="category.html">Shirts</a>
                                                 </li>
@@ -264,7 +264,16 @@
             <div class="navbar-buttons">
 
                 <div class="navbar-collapse collapse right" id="basket-overview">
-                    <a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                    <a href="#" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#exampleModal" onclick="javascript:opencart()"><i class="fa fa-shopping-cart"></i>
+                        <span class="cartcount"><?php echo count($this->cart->contents());  ?></span> Items in Cart
+                    </a>              
+
+                     
+     <!-- <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal" onclick="javascript:opencart()" >
+    <span>
+          Cart ( <span class="cartcount"><?php echo count($this->cart->contents());  ?></span> )
+        </span>
+    </button> -->
                 </div>
                 <!--/.nav-collapse -->
 

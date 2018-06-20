@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration date="2018/05/30" author="e.World Technology Ltd.">
+  <project id="{5F75FB82-818D-4215-98B6-C9663573F874}" file="" name="project1" product="PHPMaker" version="14.0" datetime="2018/05/30 08:37:32" languagefolder="phplang" userlevel="-2,&quot;Anonymous&quot;,0;">
+    <table id="brands" name="brands" caption="brands" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="cart" name="cart" caption="cart" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="categories" name="categories" caption="categories" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="orders" name="orders" caption="orders" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="products" name="products" caption="products" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+    <table id="user_info" name="user_info" caption="user info" userlevel="-2,&quot;Anonymous&quot;,0;" priv="1" />
+  </project>
+</configuration>

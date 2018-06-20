@@ -18,6 +18,21 @@
 		}
 	}
 
+  function get_by_field($sql, $option=false){
+    $query  = $this->db->query($sql);
+    
+    if($option == 'trace')
+      print_r($this->db->queries);    
+      
+    if(!empty($query))
+    {
+      $results = array();
+      if ( $query->num_rows() > 0 )
+        $results = $query->result_array();
+      return $results;  
+    }
+  }
+
  	
     function category()
     {
@@ -42,4 +57,13 @@
    	  return false;
    	}
  	}
+
+function brand_name($id){
+    $this->db->select('brand_title');
+    $this->db->from('brands');
+    $this->db->where('brand_id',$id);
+    return $this->db->get('brands');
+}
+
+
 }

@@ -59,6 +59,17 @@ $route['contact.html']='front/contact';
 
 // Detail
 $route['detail.html']='front/detail';
+$route['detail.html/(:any)']='front/detail/$1';
+
+// categories($cat_di,$brand,$product_id)
+$route['cats.html/(:any)/(:any)/(:any)']='front/cats/$1/$2/$3';
+
+// Shopping Process
+$route['shopping/checkout1.html']='shopping/checkout1';
+$route['shopping/checkout2.html']='shopping/checkout2';
+$route['shopping/checkout3.html']='shopping/checkout3';
+$route['shopping/checkout4.html']='shopping/checkout4';
+
 
 // Category
 $route['category.html']='front/category';
